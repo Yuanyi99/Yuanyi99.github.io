@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="清风的Blog">
+    <meta name="keywords" content="渗透基础知识, 清风的Blog">
     <meta name="description" content="本网站是个人兴趣爱好，总结学习经验。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>清风的Blog</title>
+    <title>渗透基础知识 | 清风的Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">渗透基础知识</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-11
+                    2021-03-11
                 </div>
                 
 
@@ -464,35 +464,50 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="HTTP-S数据包"><a href="#HTTP-S数据包" class="headerlink" title="HTTP/S数据包"></a>HTTP/S数据包</h2><h3 id="1-http-https"><a href="#1-http-https" class="headerlink" title="1.http / https"></a>1.http / https</h3><p><img src="images/http.png"></p>
-<table>
-<thead>
-<tr>
-<th align="center">HTTP</th>
-<th align="center">HTTPS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">HTTP</td>
-<td align="center">HTTP</td>
-</tr>
-<tr>
-<td align="center">TCP</td>
-<td align="center">SSL  &amp;  TLS(加密)</td>
-</tr>
-<tr>
-<td align="center">IP</td>
-<td align="center">TCP</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">IP</td>
-</tr>
-</tbody></table>
-<h4 id="HTTP的简要通信过程"><a href="#HTTP的简要通信过程" class="headerlink" title="HTTP的简要通信过程"></a>HTTP的简要通信过程</h4><p>建立连接 ——&gt;发送请求数据包 ——&gt;返回相应数据包——&gt;关闭连接</p>
-<h4 id="HTTPS的简要通讯过程"><a href="#HTTPS的简要通讯过程" class="headerlink" title="HTTPS的简要通讯过程"></a>HTTPS的简要通讯过程</h4><img src="images/https.png" style="zoom:80%;" />
+                <h2 id="基础入门"><a href="#基础入门" class="headerlink" title="基础入门"></a>基础入门</h2><h3 id="1-域名"><a href="#1-域名" class="headerlink" title="1.域名"></a>1.域名</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">什么是域名？</span><br><span class="line">多级域名？</span><br></pre></td></tr></table></figure>
 
-<h3 id="Request请求数据包数据格式"><a href="#Request请求数据包数据格式" class="headerlink" title="Request请求数据包数据格式"></a>Request请求数据包数据格式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">请求行 ： 请求类型 /请求资源路径 协议的版本和类型</span><br><span class="line">  HTTP规定了<span class="number">8</span>种可能的请求方法(最常见的还是 get 和 post 方法)：</span><br><span class="line"> *get: 检索url中标识资源的一个简单请求</span><br><span class="line"> *head: 与get方法相同，服务器只返回状态行和头标，并不返回请求文档</span><br><span class="line"> *post: 服务器接受被写入客户端输出流中的数据的请求</span><br><span class="line">	put: 服务器保存请求数据作为指定URL新内容的请求</span><br><span class="line">	delete: 服务器删除URL中命令的资源的请求</span><br><span class="line">	options: 关于服务器支持的请求方法信息的请求</span><br><span class="line">	trace:web服务器反馈http请求和其头标的请求</span><br><span class="line">	connect: </span><br><span class="line">请求头 ： 一些键值对，浏览器和web服务器之间都可以发送，特定的某种含义</span><br><span class="line">  	Host: 主机或域名地址</span><br><span class="line">    </span><br><span class="line">空行  ：  请求头与请求体之间用一个空行隔开</span><br><span class="line">请求体 ：要发送的数据（一般post提交用）</span><br><span class="line"></span><br><span class="line">例:</span><br><span class="line">GET /?cate=<span class="number">2</span> HTTP/<span class="number">1.1</span>      <span class="comment">//请求行</span></span><br><span class="line">Host: www.xiaodi8.com</span><br><span class="line">Proxy-Connection: keep-alive</span><br><span class="line">Upgrade-Insecure-Requests: <span class="number">1</span></span><br><span class="line">DNT: <span class="number">1</span></span><br><span class="line">User-Agent: Mozilla/<span class="number">5.0</span> (Windows NT <span class="number">10.0</span>; Win64; x64) AppleWebKit/<span class="number">537.36</span> (KHTML, like Gecko) Chrome/<span class="number">90.0</span><span class="number">.4430</span><span class="number">.93</span> Safari/<span class="number">537.36</span> Edg/<span class="number">90.0</span><span class="number">.818</span><span class="number">.51</span></span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=<span class="number">0.9</span>,image/webp,image/apng,*<span class="comment">/*;q=0.8,application/signed-exchange;v=b3;q=0.9</span></span><br><span class="line"><span class="comment">Referer: http://xiaodi8.com/    //从哪跳转过来的</span></span><br><span class="line"><span class="comment">Accept-Encoding: gzip, deflate</span></span><br><span class="line"><span class="comment">Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,ja;q=0.5,zh-TW;q=0.4</span></span><br><span class="line"><span class="comment">Cookie: ZDEDebuggerPresent=php,phtml,php3; timezone=8; _ga=GA1.2.204207680.1619924442; _gid=GA1.2.1405938152.1619924442</span></span><br><span class="line"><span class="comment"></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-DNS"><a href="#2-DNS" class="headerlink" title="2.DNS"></a>2.DNS</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">什么是 DNS?</span><br><span class="line">  域名系统 管理域名和ip的对应关系</span><br><span class="line">本地hosts 与 DNS的关系？</span><br><span class="line">  hosts文件相当于一个本地DNS服务器，电脑优先在本地hosts文件中查找网址对应IP,找不到才会向DNS请求</span><br><span class="line">CDN ? 和 DNS的关系？</span><br><span class="line">  CDN 内容分发网络，加速用的，让用户就近访问数据 ，依靠DNS服务定位</span><br><span class="line">常见的DNS安全攻击有那些？</span><br><span class="line">  缓存投毒，DNS劫持，域名劫持，DNS DDoS攻击，反射式DNS放大攻击</span><br></pre></td></tr></table></figure>
+<h3 id="3-WEB"><a href="#3-WEB" class="headerlink" title="3.WEB"></a>3.WEB</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">web的组成架构模型</span><br><span class="line">	网站源码： 分脚本类型，分应用方向</span><br><span class="line">	操作系统： windows， linux</span><br><span class="line">	中间件： apache, iis ,tomcat, nginx等</span><br><span class="line">	数据库： mysql ，oracle， db2 ，postsql</span><br><span class="line"></span><br><span class="line">架构漏洞安全测试简要介绍：</span><br><span class="line">	</span><br><span class="line">为什么要从WEB层面为主为首？</span><br><span class="line">	web用的多</span><br></pre></td></tr></table></figure>
+<h3 id="WEB相关漏洞介绍"><a href="#WEB相关漏洞介绍" class="headerlink" title="WEB相关漏洞介绍"></a>WEB相关漏洞介绍</h3><h4 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h4><p>Web应用一般是指B/S架构的通过HTTP/HTTPS协议提供服务的统称。</p>
+<p>随着互联网的发展，Web应用已经融入了我们的日常生活的各个方面。</p>
+<p>在目前的Web应用中，大多数应用不都是静态的网页浏览，而是涉及到服务器的动态处理。</p>
+<p>如果开发者的安全意识不强，就会导致Web应用安全问题层出不穷。</p>
+<p>我们一般说的Web应用攻击，是指攻击者通过浏览器或者其他的攻击工具，在URL或者其他的输入区域(如表单等)，向Web服务器发送特殊的请求，从中发现Web应用程序中存在的漏洞，进而操作和控制网站，达到入侵者的目的。</p>
+<h3 id="常见安全漏洞"><a href="#常见安全漏洞" class="headerlink" title="常见安全漏洞"></a>常见安全漏洞</h3><h5 id="一、SQL注入"><a href="#一、SQL注入" class="headerlink" title="一、SQL注入"></a>一、SQL注入</h5><p>SQL注入(SQL Injection)，是最常见影响非常广泛的漏洞。攻击者通过把SQL命令插入到Web表单递交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令，从而入侵数据库来执行未授意的任意查询。</p>
+<p>SQL注入可能造成的危害有：网页、数据被篡改，核心数据被窃取，数据库所在的服务器被攻击，变成傀儡主机。</p>
+<p>例如有些网站没有使用预编译sql，用户在界面上输入的一些字段被添加到sql中，很有可能这些字段包含一些恶意的sql命令。如:password = “1’ OR ‘1’=’1”；即使不知道用户密码，也能正常登录。</p>
+<p><strong>测试方法：</strong></p>
+<p>在需要进行查询的页面，输入正确查询条件 and 1=1等简单sql语句，查看应答结果，如与输入正确查询条件返回结果一致，表明应用程序对用户输入未进行过滤，可以初步判断此处存在SQL注入漏洞</p>
+<h4 id="二、XSS跨站脚本攻击"><a href="#二、XSS跨站脚本攻击" class="headerlink" title="二、XSS跨站脚本攻击"></a>二、XSS跨站脚本攻击</h4><p>SS(Cross Site Script)，与SQL注入相似，XSS是通过网页插入恶意脚本，主要用到的技术也是前端的HTML和JavaScript脚本。当用户浏览网页时，实现控制用户浏览器行为的攻击方式。</p>
+<p>一次成功的XSS，可以获取到用户的cookie，利用该cookie盗取用户对该网站的操作权限；也可以获取到用户联系人列表，利用被攻击者的身份向特定的目标群发送大量的垃圾信息，等等。</p>
+<p>XSS分为三类：存储型(持久性XSS)、反射型(非持久性XSS)、DOM型。</p>
+<img src="https://img3.sycdn.imooc.com/5d4d0f400001839310800361.jpg" alt="img" style="zoom:50%;" />
+
+<p><strong>测试方法：</strong></p>
+<p>在数据输入界面，输入：，保存成功后如果弹出对话框，表明此处存在一个XSS 漏洞。</p>
+<p>或把url请求中参数改为，如果页面弹出对话框，表明此处存在一个XSS 漏洞。</p>
+<h4 id="三、CSRF跨站伪造请求攻击"><a href="#三、CSRF跨站伪造请求攻击" class="headerlink" title="三、CSRF跨站伪造请求攻击"></a>三、CSRF跨站伪造请求攻击</h4><p>CSRF(Cross Site Request Forgery)，利用已登录的用户身份，以用户的名义发送恶意请求，完成非法操作。</p>
+<p>例如：用户如果浏览并信任了存在CSRF漏洞的网站A，浏览器产生了相应的cookie，用户在没有退出该网站的情况下，访问了危险网站B 。</p>
+<p>危险网站B要求访问网站A，发出一个请求。浏览器带着用户的cookie信息访问了网站A，因为网站A不知道是用户自身发出的请求还是危险网站B发出的请求，所以就会处理危险网站B的请求，这样就完成了模拟用户操作的目的。这就是CSRF攻击的基本思想。</p>
+<p><strong>测试方法：</strong></p>
+<ol>
+<li><p>同个浏览器打开两个页面，一个页面权限失效后，另一个页面是否可操作成功，如果仍然能操作成功即存在风险。</p>
+</li>
+<li><p>使用工具发送请求，在http请求头中不加入referer字段，检验返回消息的应答，应该重新定位到错误界面或者登录界面。</p>
+</li>
+</ol>
+<h4 id="四、文件上传漏洞"><a href="#四、文件上传漏洞" class="headerlink" title="四、文件上传漏洞"></a>四、文件上传漏洞</h4><p>文件上传攻击是指攻击者上传了一个可执行文件到服务器上，并执行。</p>
+<p>这种攻击方式是最直接有效的。上传的文件可以是病毒、木马、恶意脚本或者是webshell等等。</p>
+<p>Webshell是以asp、php、jsp或者cgi等网页文件形式存在的一种命令执行环境，也可以说是一种网页后门。攻击者在受影响系统防止或插入webshell后，可以通过webshell方便进入系统，达到控制网站服务器的目的。</p>
+<p><strong>测试方法：</strong></p>
+<p>对上传的文件类型、大小等进行严格校验，禁止上传恶意代码的文件。</p>
+<p>对相关目录的执行权限进行校验，可以通过浏览器访问Web 服务器上的所有目录，检查是否返回目录结构，如果显示的是目录结构，则可能存在安全问题。</p>
+<h4 id="五、URL跳转漏洞"><a href="#五、URL跳转漏洞" class="headerlink" title="五、URL跳转漏洞"></a>五、URL跳转漏洞</h4><p>URL跳转漏洞，即未经验证的重定向漏洞，是指Web程序直接跳转到参数中的URL，或者在页面中引入了任意开发者的URL，将程序引导到不安全的第三方区域，从而导致安全问题。</p>
+<p><strong>测试方法：</strong></p>
+<p>1.使用抓包工具抓取请求。</p>
+<p>2.抓取302的url，修改目标地址，查看是否能跳转。</p>
+<p>ps：不过现在很多跳转都加了referer的校验导致攻击者跳转失败。</p>
 
                 
             </div>
@@ -519,7 +534,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Yuanyi99.github.io/2021/05/11/%E6%95%B0%E6%8D%AE%E5%8C%85%E6%8B%93%E5%B1%95/">http://Yuanyi99.github.io/2021/05/11/%E6%95%B0%E6%8D%AE%E5%8C%85%E6%8B%93%E5%B1%95/</a>
+                    <a href="http://Yuanyi99.github.io/2021/03/11/%E6%B8%97%E9%80%8F%E5%85%A5%E9%97%A8/">http://Yuanyi99.github.io/2021/03/11/%E6%B8%97%E9%80%8F%E5%85%A5%E9%97%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -726,18 +741,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/11/%E6%95%B0%E6%8D%AE%E5%8C%85%E6%8B%93%E5%B1%95/">
+                <a href="/2021/03/11/%E6%95%B0%E6%8D%AE%E5%8C%85%E6%8B%93%E5%B1%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="数据包拓展">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">数据包拓展</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -747,9 +761,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-11
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -758,7 +772,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -769,13 +782,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/11/%E6%B8%97%E9%80%8F/">
+                <a href="/2021/02/19/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -786,7 +799,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-19
                             </span>
                         <span class="publish-author">
                             

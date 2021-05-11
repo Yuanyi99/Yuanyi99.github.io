@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 清风的Blog">
+    <meta name="keywords" content="数据包拓展, 清风的Blog">
     <meta name="description" content="本网站是个人兴趣爱好，总结学习经验。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 清风的Blog</title>
+    <title>数据包拓展 | 清风的Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">数据包拓展</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-19
+                    2021-03-11
                 </div>
                 
 
@@ -464,15 +464,35 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h2 id="HTTP-S数据包"><a href="#HTTP-S数据包" class="headerlink" title="HTTP/S数据包"></a>HTTP/S数据包</h2><h3 id="1-http-https"><a href="#1-http-https" class="headerlink" title="1.http / https"></a>1.http / https</h3><p><img src="images/http.png"></p>
+<table>
+<thead>
+<tr>
+<th align="center">HTTP</th>
+<th align="center">HTTPS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">HTTP</td>
+<td align="center">HTTP</td>
+</tr>
+<tr>
+<td align="center">TCP</td>
+<td align="center">SSL  &amp;  TLS(加密)</td>
+</tr>
+<tr>
+<td align="center">IP</td>
+<td align="center">TCP</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">IP</td>
+</tr>
+</tbody></table>
+<h4 id="HTTP的简要通信过程"><a href="#HTTP的简要通信过程" class="headerlink" title="HTTP的简要通信过程"></a>HTTP的简要通信过程</h4><p>建立连接 ——&gt;发送请求数据包 ——&gt;返回相应数据包——&gt;关闭连接</p>
+<h4 id="HTTPS的简要通讯过程"><a href="#HTTPS的简要通讯过程" class="headerlink" title="HTTPS的简要通讯过程"></a>HTTPS的简要通讯过程</h4><img src="images/https.png" style="zoom:80%;" />
+
+<h3 id="Request请求数据包数据格式"><a href="#Request请求数据包数据格式" class="headerlink" title="Request请求数据包数据格式"></a>Request请求数据包数据格式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">请求行 ： 请求类型 /请求资源路径 协议的版本和类型</span><br><span class="line">  HTTP规定了<span class="number">8</span>种可能的请求方法(最常见的还是 get 和 post 方法)：</span><br><span class="line"> *get: 检索url中标识资源的一个简单请求</span><br><span class="line"> *head: 与get方法相同，服务器只返回状态行和头标，并不返回请求文档</span><br><span class="line"> *post: 服务器接受被写入客户端输出流中的数据的请求</span><br><span class="line">	put: 服务器保存请求数据作为指定URL新内容的请求</span><br><span class="line">	delete: 服务器删除URL中命令的资源的请求</span><br><span class="line">	options: 关于服务器支持的请求方法信息的请求</span><br><span class="line">	trace:web服务器反馈http请求和其头标的请求</span><br><span class="line">	connect: </span><br><span class="line">请求头 ： 一些键值对，浏览器和web服务器之间都可以发送，特定的某种含义</span><br><span class="line">  	Host: 主机或域名地址</span><br><span class="line">    </span><br><span class="line">空行  ：  请求头与请求体之间用一个空行隔开</span><br><span class="line">请求体 ：要发送的数据（一般post提交用）</span><br><span class="line"></span><br><span class="line">例:</span><br><span class="line">GET /?cate=<span class="number">2</span> HTTP/<span class="number">1.1</span>      <span class="comment">//请求行</span></span><br><span class="line">Host: www.xiaodi8.com</span><br><span class="line">Proxy-Connection: keep-alive</span><br><span class="line">Upgrade-Insecure-Requests: <span class="number">1</span></span><br><span class="line">DNT: <span class="number">1</span></span><br><span class="line">User-Agent: Mozilla/<span class="number">5.0</span> (Windows NT <span class="number">10.0</span>; Win64; x64) AppleWebKit/<span class="number">537.36</span> (KHTML, like Gecko) Chrome/<span class="number">90.0</span><span class="number">.4430</span><span class="number">.93</span> Safari/<span class="number">537.36</span> Edg/<span class="number">90.0</span><span class="number">.818</span><span class="number">.51</span></span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=<span class="number">0.9</span>,image/webp,image/apng,*<span class="comment">/*;q=0.8,application/signed-exchange;v=b3;q=0.9</span></span><br><span class="line"><span class="comment">Referer: http://xiaodi8.com/    //从哪跳转过来的</span></span><br><span class="line"><span class="comment">Accept-Encoding: gzip, deflate</span></span><br><span class="line"><span class="comment">Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6,ja;q=0.5,zh-TW;q=0.4</span></span><br><span class="line"><span class="comment">Cookie: ZDEDebuggerPresent=php,phtml,php3; timezone=8; _ga=GA1.2.204207680.1619924442; _gid=GA1.2.1405938152.1619924442</span></span><br><span class="line"><span class="comment"></span></span><br></pre></td></tr></table></figure>
 
                 
             </div>
@@ -499,7 +519,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Yuanyi99.github.io/2021/02/19/hello-world/">http://Yuanyi99.github.io/2021/02/19/hello-world/</a>
+                    <a href="http://Yuanyi99.github.io/2021/03/11/%E6%95%B0%E6%8D%AE%E5%8C%85%E6%8B%93%E5%B1%95/">http://Yuanyi99.github.io/2021/03/11/%E6%95%B0%E6%8D%AE%E5%8C%85%E6%8B%93%E5%B1%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -710,13 +730,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/03/11/%E6%B8%97%E9%80%8F%E5%85%A5%E9%97%A8/">
+                <a href="/2021/04/11/VPN/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="渗透基础知识">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="VPN">
                         
-                        <span class="card-title">渗透基础知识</span>
+                        <span class="card-title">VPN</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -727,7 +747,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-11
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-11
                         </span>
                         <span class="publish-author">
                             
@@ -744,16 +764,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/19/hello-world/">
+                <a href="/2021/03/11/%E6%B8%97%E9%80%8F%E5%85%A5%E9%97%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="渗透基础知识">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">渗透基础知识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -764,7 +784,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-11
                             </span>
                         <span class="publish-author">
                             
@@ -774,7 +794,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
